@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipshape Minds - Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#2D2A32',
+                        surface: '#FFFFFF',
+                        canvas: '#F4F0F9',
+                        line: '#E5DEF0',
+                        accent: '#4B2E83',
+                        lavender: '#E9E4F0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        script: ['"Playfair Display"', 'serif'],
+                    },
+                    borderRadius: {
+                        jumbo: '2rem',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; color: #2D2A32; background-color: #FFFFFF; overflow-x: hidden; }
+        .font-script { font-family: 'Playfair Display', serif; font-style: italic; }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
+            background-color: #4B2E83; transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .active-link::after { width: 100%; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav id="header" class="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="flex items-center space-x-2">
+            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+            <div class="leading-none">
+                <h1 class="text-xl font-bold tracking-tight text-accent uppercase">Shipshape Minds</h1>
+                <p class="text-[10px] text-gray-400 uppercase tracking-tighter">Planting Seeds of Hope</p>
+            </div>
+        </div>
+        <div class="hidden lg:flex items-center space-x-8">
+            <a href="Home__desktop.html" class="nav-link text-sm font-medium">Home</a>
+            <a href="About Us__desktop.html" class="nav-link text-sm font-medium">About Us</a>
+            <a href="Our Programs__desktop.html" class="nav-link text-sm font-medium">Our Programs</a>
+            <a href="Get Involved__desktop.html" class="nav-link text-sm font-medium">Get Involved</a>
+            <a href="Contact Us__desktop.html" class="nav-link active-link text-sm font-medium">Contact Us</a>
+        </div>
+        <a href="Donations__desktop.html" class="bg-accent text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-all flex items-center">
+            <i class="fa-solid fa-heart mr-2"></i> Donate Now
+        </a>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-40 pb-20 px-6 bg-canvas text-center">
+        <div class="max-w-4xl mx-auto space-y-6">
+            <h1 class="text-5xl md:text-6xl font-bold text-accent">Contact Us</h1>
+            <p class="font-script text-2xl text-gray-500">We'd love to hear from you</p>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Have a question about our programs, or want to learn how you can help? Reach out to our team and we'll get back to you as soon as possible.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- Contact Info -->
+            <div class="space-y-12">
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold text-accent">Get in Touch</h2>
+                    <p class="text-lg text-gray-600">Our team is here to support you and answer any questions you may have about our mission and impact.</p>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-14 h-14 bg-lavender text-accent rounded-2xl flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-accent text-lg mb-1">Our Office</h4>
+                            <p class="text-gray-600">123 Hope Avenue, Suite 400<br>Cape Town, South Africa 8001</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-6">
+                        <div class="w-14 h-14 bg-lavender text-accent rounded-2xl flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-accent text-lg mb-1">Phone</h4>
+                            <p class="text-gray-600">+27 (0) 21 555 0123<br>Mon-Fri, 9am - 5pm</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-6">
+                        <div class="w-14 h-14 bg-lavender text-accent rounded-2xl flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-accent text-lg mb-1">Email</h4>
+                            <p class="text-gray-600">hello@shipshapeminds.org<br>support@shipshapeminds.org</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-canvas rounded-jumbo space-y-4">
+                    <h4 class="font-bold text-accent">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 bg-white text-accent rounded-full flex items-center justify-center shadow-sm hover:bg-accent hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-12 h-12 bg-white text-accent rounded-full flex items-center justify-center shadow-sm hover:bg-accent hover:text-white transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-12 h-12 bg-white text-accent rounded-full flex items-center justify-center shadow-sm hover:bg-accent hover:text-white transition-all"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-12 h-12 bg-white text-accent rounded-full flex items-center justify-center shadow-sm hover:bg-accent hover:text-white transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-white p-10 rounded-3xl shadow-2xl shadow-accent/5 border border-line">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-accent uppercase tracking-wider">Full Name</label>
+                            <input type="text" placeholder="John Doe" class="w-full bg-canvas rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/20">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-accent uppercase tracking-wider">Email Address</label>
+                            <input type="email" placeholder="john@example.com" class="w-full bg-canvas rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/20">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-accent uppercase tracking-wider">Subject</label>
+                        <select class="w-full bg-canvas rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/20">
+                            <option>General Inquiry</option>
+                            <option>Volunteer Opportunity</option>
+                            <option>Donation Question</option>
+                            <option>Partnership Proposal</option>
+                            <option>Media & Press</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-accent uppercase tracking-wider">Message</label>
+                        <textarea rows="5" placeholder="How can we help you?" class="w-full bg-canvas rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/20 resize-none"></textarea>
+                    </div>
+                    <button class="w-full bg-accent text-white py-4 rounded-xl font-bold hover:bg-opacity-90 transition-all flex items-center justify-center space-x-2">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Placeholder -->
+    <section class="h-[500px] bg-canvas relative overflow-hidden">
+        <div class="absolute inset-0 grayscale opacity-50 bg-[url('https://api.mapbox.com/styles/v1/mapbox/light-v10/static/18.4233, -33.9249,12/1200x600?access_token=YOUR_TOKEN')] bg-cover bg-center"></div>
+        <div class="relative h-full flex items-center justify-center">
+            <div class="bg-white p-6 rounded-2xl shadow-xl flex items-center space-x-4">
+                <div class="w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                    <h5 class="font-bold text-accent">Shipshape Minds HQ</h5>
+                    <p class="text-xs text-gray-500 uppercase tracking-widest">Visit our office</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-accent text-white pt-20 pb-10 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-white text-accent rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-brain text-sm"></i>
+                        </div>
+                        <h2 class="text-xl font-bold tracking-tight uppercase">Shipshape Minds</h2>
+                    </div>
+                    <p class="text-sm opacity-70 leading-relaxed">Planting seeds of hope beyond circumstances. Dedicated to nurturing the potential of every child through community-focused initiatives.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 opacity-70 text-sm">
+                        <li><a href="Home__desktop.html" class="hover:underline">Home</a></li>
+                        <li><a href="About Us__desktop.html" class="hover:underline">About Us</a></li>
+                        <li><a href="Our Programs__desktop.html" class="hover:underline">Our Programs</a></li>
+                        <li><a href="Get Involved__desktop.html" class="hover:underline">Get Involved</a></li>
+                        <li><a href="Contact Us__desktop.html" class="hover:underline">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Our Programs</h4>
+                    <ul class="space-y-3 opacity-70 text-sm">
+                        <li><a href="#" class="hover:underline">Mental Health Support</a></li>
+                        <li><a href="#" class="hover:underline">Life Skills Development</a></li>
+                        <li><a href="#" class="hover:underline">Child Protection Awareness</a></li>
+                        <li><a href="#" class="hover:underline">Food & Basic Support</a></li>
+                        <li><a href="#" class="hover:underline">School & Community Outreach</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Join Our Newsletter</h4>
+                    <form class="flex gap-2">
+                        <input type="email" placeholder="Email" class="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-white w-full">
+                        <button class="bg-white text-accent px-4 py-2 rounded-lg text-sm font-bold">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-center text-xs opacity-50 uppercase tracking-widest">
+                <p>© 2025 Shipshape Minds NPO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

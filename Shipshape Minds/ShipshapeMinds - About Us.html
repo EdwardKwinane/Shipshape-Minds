@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipshape Minds - About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#2D2A32',
+                        surface: '#FFFFFF',
+                        canvas: '#F4F0F9',
+                        line: '#E5DEF0',
+                        accent: '#4B2E83',
+                        lavender: '#E9E4F0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        script: ['"Playfair Display"', 'serif'],
+                    },
+                    borderRadius: {
+                        jumbo: '2rem',
+                    },
+                    animation: {
+                        'marquee': 'marquee 25s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; color: #2D2A32; background-color: #FFFFFF; overflow-x: hidden; }
+        .font-script { font-family: 'Playfair Display', serif; font-style: italic; }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
+            background-color: #4B2E83; transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .active-link::after { width: 100%; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav id="header" class="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="flex items-center space-x-2">
+            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+            <div class="leading-none">
+                <h1 class="text-xl font-bold tracking-tight text-accent uppercase">Shipshape Minds</h1>
+                <p class="text-[10px] text-gray-400 uppercase tracking-tighter">Planting Seeds of Hope</p>
+            </div>
+        </div>
+        <div class="hidden lg:flex items-center space-x-8">
+            <a href="Home__desktop.html" class="nav-link text-sm font-medium">Home</a>
+            <a href="About Us__desktop.html" class="nav-link active-link text-sm font-medium">About Us</a>
+            <a href="Our Programs__desktop.html" class="nav-link text-sm font-medium">Our Programs</a>
+            <a href="Get Involved__desktop.html" class="nav-link text-sm font-medium">Get Involved</a>
+            <a href="Contact Us__desktop.html" class="nav-link text-sm font-medium">Contact Us</a>
+        </div>
+        <a href="Donations__desktop.html" class="bg-accent text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-all flex items-center">
+            <i class="fa-solid fa-heart mr-2"></i> Donate Now
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-40 pb-20 px-6 bg-canvas overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <h1 class="text-6xl md:text-7xl font-bold text-accent leading-none tracking-tight">
+                    About <br>
+                    <span class="text-ink">Shipshape Minds</span>
+                </h1>
+                <div class="flex items-center space-x-4">
+                    <p class="font-script text-2xl text-gray-500">Planting seeds of hope beyond circumstances</p>
+                </div>
+                <p class="text-lg text-gray-600 leading-relaxed max-w-xl">
+                    Shipshape Minds is a community-focused Non-Profit Organisation dedicated to supporting children, young people, and vulnerable communities through mental health, emotional wellness, and social development initiatives.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="Our Programs__desktop.html" class="bg-accent text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-80 transition-all">Our Programs</a>
+                    <a href="Donations__desktop.html" class="border-2 border-accent text-accent px-8 py-3 rounded-full font-bold hover:bg-accent hover:text-white transition-all">Support Our Mission</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_73a2a1ce71_e447bca89fc63f90.png" alt="warm candid lifestyle photograph of a smiling child outdoors in natural light, soft documentary styl" />
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Marquee -->
+    <div class="py-8 bg-accent overflow-hidden whitespace-nowrap">
+        <div class="inline-block animate-marquee">
+            <span class="text-2xl font-bold text-white uppercase tracking-widest px-8">Planting Seeds of Hope</span>
+            <span class="text-2xl font-bold text-white uppercase tracking-widest px-8">Planting Seeds of Hope</span>
+            <span class="text-2xl font-bold text-white uppercase tracking-widest px-8">Planting Seeds of Hope</span>
+            <span class="text-2xl font-bold text-white uppercase tracking-widest px-8">Planting Seeds of Hope</span>
+        </div>
+    </div>
+
+    <!-- Creating Safe Spaces -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="rounded-[3rem] overflow-hidden h-[600px] shadow-xl">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_590d3326bf_cff963be1cc9dcaa.png" alt="children hands together in a circle, representing unity and safe community space" />
+                    </div>
+                </div>
+                <div class="space-y-12">
+                    <div class="space-y-4">
+                        <h2 class="text-4xl font-bold text-accent">Creating Safe Spaces for Healing and Growth</h2>
+                        <p class="text-lg text-gray-600">Many children face challenges such as isolation, anxiety, neglect, and trauma. Shipshape Minds works closely with schools, communities, and partners to create environments where children can express themselves safely.</p>
+                    </div>
+
+                    <div class="bg-accent text-white p-10 rounded-jumbo relative">
+                        <i class="fa-solid fa-quote-left text-5xl opacity-20 absolute top-8 left-8"></i>
+                        <p class="text-2xl font-medium leading-relaxed italic relative z-10">
+                            "Our mission is to bring hope, healing, and opportunities to children who need support the most."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="py-24 px-6 bg-canvas">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-12 rounded-jumbo space-y-6 shadow-sm border border-line">
+                <div class="w-16 h-16 bg-lavender rounded-full flex items-center justify-center text-accent text-2xl">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <h3 class="text-3xl font-bold text-accent">Our Vision</h3>
+                <p class="text-gray-600 leading-relaxed text-lg">A world where every child has access to emotional support, opportunities, and the confidence to build a positive future.</p>
+            </div>
+            <div class="bg-white p-12 rounded-jumbo space-y-6 shadow-sm border border-line">
+                <div class="w-16 h-16 bg-lavender rounded-full flex items-center justify-center text-accent text-2xl">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <h3 class="text-3xl font-bold text-accent">Our Mission</h3>
+                <p class="text-gray-600 leading-relaxed text-lg">To provide accessible mental health support, life skills education, and development programmes that empower children and communities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="py-24 px-6 bg-accent text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="text-4xl font-bold">Our Growing Impact</h2>
+                <p class="text-xl opacity-70">Every child matters. Together we are making a difference.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div class="space-y-4">
+                    <div class="text-7xl font-bold">250+</div>
+                    <p class="uppercase text-sm tracking-widest opacity-80 font-bold">Children Reached</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="text-7xl font-bold">15+</div>
+                    <p class="uppercase text-sm tracking-widest opacity-80 font-bold">Schools Supported</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="text-7xl font-bold">100+</div>
+                    <p class="uppercase text-sm tracking-widest opacity-80 font-bold">Families Assisted</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-accent text-white pt-20 pb-10 px-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-white text-accent rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-brain text-sm"></i>
+                        </div>
+                        <h2 class="text-xl font-bold tracking-tight uppercase">Shipshape Minds</h2>
+                    </div>
+                    <p class="text-sm opacity-70 leading-relaxed">Planting seeds of hope beyond circumstances. Dedicated to nurturing the potential of every child through community-focused initiatives.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 opacity-70 text-sm">
+                        <li><a href="Home__desktop.html" class="hover:underline">Home</a></li>
+                        <li><a href="About Us__desktop.html" class="hover:underline">About Us</a></li>
+                        <li><a href="Our Programs__desktop.html" class="hover:underline">Our Programs</a></li>
+                        <li><a href="Get Involved__desktop.html" class="hover:underline">Get Involved</a></li>
+                        <li><a href="Contact Us__desktop.html" class="hover:underline">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Our Programs</h4>
+                    <ul class="space-y-3 opacity-70 text-sm">
+                        <li><a href="#" class="hover:underline">Mental Health Support</a></li>
+                        <li><a href="#" class="hover:underline">Life Skills Development</a></li>
+                        <li><a href="#" class="hover:underline">Child Protection Awareness</a></li>
+                        <li><a href="#" class="hover:underline">Food & Basic Support</a></li>
+                        <li><a href="#" class="hover:underline">School & Community Outreach</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-accent transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-accent transition-all"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-center text-xs opacity-50 uppercase tracking-widest">
+                <p>© 2025 Shipshape Minds NPO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

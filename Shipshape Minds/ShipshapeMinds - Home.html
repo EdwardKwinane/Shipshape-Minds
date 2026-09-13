@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipshape Minds - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#2D2A32',
+                        surface: '#FFFFFF',
+                        canvas: '#F4F0F9',
+                        line: '#E5DEF0',
+                        accent: '#4B2E83',
+                        lavender: '#E9E4F0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        script: ['"Playfair Display"', 'serif'],
+                    },
+                    borderRadius: {
+                        jumbo: '2rem',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; color: #2D2A32; background-color: #FFFFFF; overflow-x: hidden; }
+        .font-script { font-family: 'Playfair Display', serif; font-style: italic; }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
+            background-color: #4B2E83; transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .active-link::after { width: 100%; }
+        .gradient-bg { background: linear-gradient(180deg, #F4F0F9 0%, #FFFFFF 100%); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav id="header" class="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="flex items-center space-x-2">
+            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+            <div class="leading-none">
+                <h1 class="text-xl font-bold tracking-tight text-accent uppercase">Shipshape Minds</h1>
+                <p class="text-[10px] text-gray-400 uppercase tracking-tighter">Planting Seeds of Hope</p>
+            </div>
+        </div>
+        <div class="hidden lg:flex items-center space-x-8">
+            <a href="Home__desktop.html" class="nav-link active-link text-sm font-medium">Home</a>
+            <a href="About Us__desktop.html" class="nav-link text-sm font-medium">About Us</a>
+            <a href="Our Programs__desktop.html" class="nav-link text-sm font-medium">Our Programs</a>
+            <a href="Get Involved__desktop.html" class="nav-link text-sm font-medium">Get Involved</a>
+            <a href="Contact Us__desktop.html" class="nav-link text-sm font-medium">Contact Us</a>
+        </div>
+        <a href="Donations__desktop.html" class="bg-accent text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-all flex items-center">
+            <i class="fa-solid fa-heart mr-2"></i> Donate Now
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6 gradient-bg min-h-[800px] flex items-center">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-block px-4 py-1.5 bg-lavender text-accent rounded-full text-xs font-bold uppercase tracking-widest">
+                    Welcome to Shipshape Minds
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-bold text-accent leading-tight">
+                    Empowering Young Minds for a <span class="text-ink">Brighter Future</span>
+                </h1>
+                <p class="text-xl text-gray-600 leading-relaxed max-w-xl">
+                    Dedicated to supporting children, young people, and vulnerable communities through mental health, emotional wellness, and social development initiatives.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="Our Programs__desktop.html" class="bg-accent text-white px-10 py-4 rounded-full font-bold hover:bg-opacity-90 transition-all">
+                        Our Programs
+                    </a>
+                    <a href="About Us__desktop.html" class="border-2 border-accent text-accent px-10 py-4 rounded-full font-bold hover:bg-accent hover:text-white transition-all">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-10 -left-10 w-40 h-40 bg-lavender rounded-full opacity-50 blur-3xl"></div>
+                <div class="absolute -bottom-10 -right-10 w-60 h-60 bg-accent/10 rounded-full opacity-50 blur-3xl"></div>
+                <div class="relative rounded-[3rem] overflow-hidden shadow-2xl shadow-accent/20">
+                    <img class="w-full h-[600px] object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_fcff7fcb27_08e58ce7830b4c12.png" alt="a group of diverse happy children playing together in a bright, modern educational space, soft light" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Areas -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="text-4xl font-bold text-accent">What We Focus On</h2>
+                <p class="font-script text-xl text-gray-500">Planting seeds of hope beyond circumstances</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-10 bg-canvas rounded-jumbo space-y-6 hover:shadow-xl transition-shadow">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-accent text-2xl shadow-sm">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-accent">Mental Health</h3>
+                    <p class="text-gray-600 leading-relaxed">Providing accessible mental health support and life skills education that empower children to thrive.</p>
+                </div>
+                <div class="p-10 bg-lavender rounded-jumbo space-y-6 hover:shadow-xl transition-shadow">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-accent text-2xl shadow-sm">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-accent">Educational Partnerships</h3>
+                    <p class="text-gray-600 leading-relaxed">Working closely with schools and communities to create environments for growth and learning.</p>
+                </div>
+                <div class="p-10 bg-canvas rounded-jumbo space-y-6 hover:shadow-xl transition-shadow">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-accent text-2xl shadow-sm">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-accent">Community Outreach</h3>
+                    <p class="text-gray-600 leading-relaxed">Connecting children and families with practical and emotional assistance through our networks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Programs Preview -->
+    <section class="py-24 px-6 bg-canvas">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div class="space-y-4">
+                    <h2 class="text-4xl font-bold text-accent tracking-tight">Our Programs</h2>
+                    <p class="text-gray-600 max-w-xl">Explore our diverse range of initiatives designed to support every aspect of a child's development.</p>
+                </div>
+                <a href="Our Programs__desktop.html" class="text-accent font-bold uppercase text-sm tracking-widest flex items-center hover:opacity-70 transition-opacity">
+                    View All Programs <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Program 1 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_f92a42d465_b452fa7a0c284752.png" alt="close up of children hands together, unity concept, bright and colorful" />
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h4 class="text-lg font-bold text-accent">Emotional Wellbeing</h4>
+                        <p class="text-sm text-gray-500">Helping children talk about and manage their feelings.</p>
+                    </div>
+                </div>
+                <!-- Program 2 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_5f3d288ad6_6336d65c6b200b74.png" alt="children in a classroom setting, learning and engaged" />
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h4 class="text-lg font-bold text-accent">School Support</h4>
+                        <p class="text-sm text-gray-500">Promoting positive behavior and growth in schools.</p>
+                    </div>
+                </div>
+                <!-- Program 3 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_adceeb17ad_ad11f4b495398482.png" alt="community center donations and supplies being packed by volunteers" />
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h4 class="text-lg font-bold text-accent">Basic Needs</h4>
+                        <p class="text-sm text-gray-500">Assisting families with food parcels and school uniforms.</p>
+                    </div>
+                </div>
+                <!-- Program 4 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_4a13277b0b_e508440ed9beb88f.png" alt="teens talking in a circle, life skills workshop, empowering atmosphere" />
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h4 class="text-lg font-bold text-accent">Life Skills</h4>
+                        <p class="text-sm text-gray-500">Developing leadership and future readiness in youth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="py-24 px-6 bg-accent text-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div class="space-y-4">
+                <div class="text-6xl font-bold">250+</div>
+                <p class="uppercase text-sm tracking-widest opacity-80">Children Reached</p>
+            </div>
+            <div class="space-y-4 border-y md:border-y-0 md:border-x border-white/20 py-8 md:py-0">
+                <div class="text-6xl font-bold">15+</div>
+                <p class="uppercase text-sm tracking-widest opacity-80">Schools Supported</p>
+            </div>
+            <div class="space-y-4">
+                <div class="text-6xl font-bold">100+</div>
+                <p class="uppercase text-sm tracking-widest opacity-80">Families Assisted</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Mission CTA -->
+    <section class="py-24 px-6">
+        <div class="max-w-5xl mx-auto bg-lavender rounded-[3rem] p-12 md:p-20 flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2 space-y-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-accent leading-tight">Together, We Can Create Brighter Futures</h2>
+                <p class="text-lg text-gray-600">Your support helps us provide emotional support, educational opportunities, and essential resources to children who need them most.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="Donations__desktop.html" class="bg-accent text-white px-8 py-3 rounded-full font-bold">Donate Now</a>
+                    <a href="Get Involved__desktop.html" class="bg-white text-accent px-8 py-3 rounded-full font-bold">Become a Volunteer</a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <div class="rounded-3xl overflow-hidden shadow-xl">
+                    <img class="w-full h-[300px] object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_adb4405aa8_c01df1e2fdff2dff.png" alt="smiling kids of diverse backgrounds together, colorful and bright, representing a hopeful future" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-accent text-white pt-20 pb-10 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-white text-accent rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-brain text-sm"></i>
+                        </div>
+                        <h2 class="text-xl font-bold tracking-tight uppercase">Shipshape Minds</h2>
+                    </div>
+                    <p class="text-sm opacity-70 leading-relaxed">Planting seeds of hope beyond circumstances. Dedicated to nurturing the potential of every child through community-focused initiatives.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-accent transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-accent transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-accent transition-all"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-accent transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 opacity-70 text-sm">
+                        <li><a href="Home__desktop.html" class="hover:underline">Home</a></li>
+                        <li><a href="About Us__desktop.html" class="hover:underline">About Us</a></li>
+                        <li><a href="Our Programs__desktop.html" class="hover:underline">Our Programs</a></li>
+                        <li><a href="Get Involved__desktop.html" class="hover:underline">Get Involved</a></li>
+                        <li><a href="Contact Us__desktop.html" class="hover:underline">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Our Programs</h4>
+                    <ul class="space-y-3 opacity-70 text-sm">
+                        <li><a href="#" class="hover:underline">Mental Health Support</a></li>
+                        <li><a href="#" class="hover:underline">Life Skills Development</a></li>
+                        <li><a href="#" class="hover:underline">Child Protection Awareness</a></li>
+                        <li><a href="#" class="hover:underline">Food & Basic Support</a></li>
+                        <li><a href="#" class="hover:underline">School & Community Outreach</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Subscribe</h4>
+                    <p class="text-sm opacity-70 mb-4">Stay updated with our latest news and impact stories.</p>
+                    <form class="flex gap-2">
+                        <input type="email" placeholder="Your email" class="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-white w-full">
+                        <button class="bg-white text-accent px-4 py-2 rounded-lg text-sm font-bold">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-50 uppercase tracking-widest">
+                <p>© 2025 Shipshape Minds NPO. All rights reserved.</p>
+                <p>Empowering minds. Protecting childhoods. Building a better tomorrow.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
