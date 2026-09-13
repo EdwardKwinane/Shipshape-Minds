@@ -38,6 +38,9 @@ scripts/verify.mjs       # headless-browser smoke test (puppeteer-core + Edge)
   Date: 2026-09-12
 - Decision: Functions/forms are front-end only for now.
   Reason: No backend or payment integration requested; keeps scope minimal.
+- Decision: Redesigned the Get Involved / volunteer section (heading "Get Involved. Make an Impact.", badge, 3 interactive step cards, and a 3-step multi-page application form with progress bar and success state in `src/components/GetInvolvedForm.tsx`).
+  Reason: Owner requested a cleaner, more modern, interactive volunteer/Get Involved experience on the existing brand.
+  Date: 2026-09-13
 
 ## Constraints
 - Must visually follow the Shipshape Minds design system from the assets: accent `#4B2E83`, ink `#2D2A32`, canvas `#F4F0F9`, line `#E5DEF0`, lavender `#E9E4F0`, Inter + Playfair Display, `rounded-jumbo` (2rem).
@@ -55,12 +58,12 @@ scripts/verify.mjs       # headless-browser smoke test (puppeteer-core + Edge)
 - Should forms submit anywhere, or stay front-end only?
 
 ## Next Action
-Deliver the built site; get social media profile URLs from the owner and update `src/siteConfig.ts`; confirm hosting target and whether forms need a backend.
+Deliver the built site; get social media profile URLs from the owner and update `src/siteConfig.ts`; confirm hosting target and whether forms need a backend (the new Get Involved form still submits nowhere — front-end only).
 
-## Verification (last run 2026-09-12)
+## Verification (last run 2026-09-13)
 - `npm run build` (tsc -b + vite build): passed
 - `npm run lint` (oxlint): passed
-- Headless-browser render of all 6 routes (`node scripts/verify.mjs` via `vite preview`): all passed, zero console errors
+- Headless-browser render of all 6 routes (`node scripts/verify.mjs` via `vite preview`): all passed, zero console errors (`/get-involved` marker updated to "Make an Impact")
 
 ## Live contact details (from owner 2026-09-12)
 - Phone: 05020002555

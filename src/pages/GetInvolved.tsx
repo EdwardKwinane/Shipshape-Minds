@@ -1,12 +1,21 @@
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
-import { faUserGroup, faHandshake, faBullhorn } from '@fortawesome/free-solid-svg-icons'
+import {
+  faUserGroup,
+  faHandshake,
+  faBullhorn,
+  faHandHoldingHeart,
+  faClipboardList,
+  faComments,
+  faSeedling,
+} from '@fortawesome/free-solid-svg-icons'
 import {
   faFacebookF,
   faInstagram,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
+import GetInvolvedForm from '../components/GetInvolvedForm'
 
 type InvolvementOption = {
   icon: IconDefinition
@@ -40,9 +49,21 @@ const involvement: InvolvementOption[] = [
 ]
 
 const volunteerSteps = [
-  'Submit your application form',
-  'Attend an orientation session',
-  'Start making an impact',
+  {
+    icon: faClipboardList,
+    title: "Tell us how you'd like to help",
+    body: 'Complete the short Get Involved form.',
+  },
+  {
+    icon: faComments,
+    title: 'Connect with our team',
+    body: "We'll review your application and contact you about the next steps.",
+  },
+  {
+    icon: faSeedling,
+    title: 'Start making an impact',
+    body: 'Join our programmes, initiatives or partnerships and help create positive change.',
+  },
 ]
 
 export default function GetInvolved() {
@@ -102,54 +123,53 @@ export default function GetInvolved() {
         </div>
       </section>
 
-      {/* Volunteer Section */}
+      {/* Get Involved Section */}
       <section id="volunteer-form" className="py-24 px-6 bg-canvas">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-accent leading-tight">Become a Volunteer</h2>
-            <p className="text-lg text-gray-600">
-              Our volunteers are the heartbeat of Shipshape Minds. From mentoring to event support, there's a place for your skills here.
-            </p>
-            <div className="space-y-4">
-              {volunteerSteps.map((step, i) => (
-                <div key={step} className="flex items-center space-x-4 p-4 bg-white rounded-2xl shadow-sm">
-                  <div className="w-10 h-10 bg-lavender text-accent rounded-full flex items-center justify-center font-bold">
-                    {i + 1}
-                  </div>
-                  <p className="font-medium">{step}</p>
-                </div>
-              ))}
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="space-y-10">
+            <div className="space-y-6">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-lavender text-accent rounded-full text-xs font-bold uppercase tracking-widest w-fit">
+                <FontAwesomeIcon icon={faHandHoldingHeart} className="text-sm" aria-hidden="true" />
+                Get Involved
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-accent leading-tight">
+                Get Involved. <span className="font-script">Make an Impact.</span>
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
+                Whether you want to volunteer your time, partner with us, support a programme or share your
+                professional skills, there&apos;s a place for you at Shipshape Minds.
+              </p>
+              <p className="font-script text-xl text-ink/80 border-l-4 border-accent pl-5">
+                Together, we can create safer spaces and brighter futures for children and young people.
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="hidden lg:block absolute left-7 top-8 bottom-8 w-px bg-line" aria-hidden="true" />
+              <ol className="space-y-6">
+                {volunteerSteps.map((step, i) => (
+                  <li key={step.title} className="relative flex gap-5">
+                    <div className="relative z-10 shrink-0 w-14 h-14 rounded-full bg-accent text-white flex items-center justify-center shadow-md">
+                      <span className="text-lg font-bold">{i + 1}</span>
+                    </div>
+                    <div className="group flex-1 bg-white border border-lavender rounded-2xl p-6 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="w-8 h-8 rounded-full bg-lavender text-accent flex items-center justify-center text-sm group-hover:bg-accent group-hover:text-white transition-colors">
+                          <FontAwesomeIcon icon={step.icon} aria-hidden="true" />
+                        </span>
+                        <span className="text-xs font-bold uppercase tracking-widest text-accent/70">Step {i + 1}</span>
+                      </div>
+                      <h3 className="text-lg font-bold text-ink">{step.title}</h3>
+                      <p className="text-gray-600 mt-1">{step.body}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </div>
           </div>
-          <div className="bg-white p-10 rounded-3xl shadow-xl shadow-accent/5">
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-accent uppercase tracking-wider">First Name</label>
-                  <input type="text" required className="w-full bg-canvas rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/20" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-accent uppercase tracking-wider">Last Name</label>
-                  <input type="text" required className="w-full bg-canvas rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/20" />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-bold text-accent uppercase tracking-wider">Email Address</label>
-                <input type="email" required className="w-full bg-canvas rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/20" />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-bold text-accent uppercase tracking-wider">Interest Area</label>
-                <select className="w-full bg-canvas rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/20">
-                  <option>Mentoring & Support</option>
-                  <option>Event Volunteering</option>
-                  <option>Admin & Back Office</option>
-                  <option>Marketing & Outreach</option>
-                </select>
-              </div>
-              <button className="w-full bg-accent text-white py-4 rounded-xl font-bold hover:bg-opacity-90 transition-all">
-                Submit Application
-              </button>
-            </form>
+
+          <div className="bg-white rounded-jumbo p-8 md:p-10 shadow-xl shadow-accent/5 border border-lavender">
+            <GetInvolvedForm />
           </div>
         </div>
       </section>

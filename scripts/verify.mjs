@@ -7,7 +7,7 @@ const checks = [
   ['/', 'Empowering Young Minds'],
   ['/about', 'Creating Safe Spaces'],
   ['/programs', 'Mental Health & Emotional Support'],
-  ['/get-involved', 'Become a Volunteer'],
+  ['/get-involved', 'Make an Impact'],
   ['/donate', 'Where Your Money Goes'],
   ['/contact', 'Get in Touch'],
 ]
