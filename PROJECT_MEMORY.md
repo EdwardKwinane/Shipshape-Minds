@@ -41,6 +41,9 @@ scripts/verify.mjs       # headless-browser smoke test (puppeteer-core + Edge)
 - Decision: Redesigned the Get Involved / volunteer section (heading "Get Involved. Make an Impact.", badge, 3 interactive step cards, and a 3-step multi-page application form with progress bar and success state in `src/components/GetInvolvedForm.tsx`).
   Reason: Owner requested a cleaner, more modern, interactive volunteer/Get Involved experience on the existing brand.
   Date: 2026-09-13
+- Decision: Host on Vercel (existing site); auto-deploy from GitHub via the Vercel GitHub integration.
+  Reason: Owner wants pushes to GitHub to update the live site automatically.
+  Date: 2026-09-13
 
 ## Constraints
 - Must visually follow the Shipshape Minds design system from the assets: accent `#4B2E83`, ink `#2D2A32`, canvas `#F4F0F9`, line `#E5DEF0`, lavender `#E9E4F0`, Inter + Playfair Display, `rounded-jumbo` (2rem).
@@ -49,16 +52,15 @@ scripts/verify.mjs       # headless-browser smoke test (puppeteer-core + Edge)
 
 ## Known Risks
 - Social links use `href="#"` placeholders — need real profiles.
-- SPA uses `BrowserRouter`: static hosting must serve `index.html` as a fallback for all routes (deployment concern).
+- SPA uses `BrowserRouter`: `vercel.json` rewrites all routes to `index.html` (added 2026-09-13).
 - Donation/Volunteer/Contact/Newsletter forms submit nowhere yet — need backend/form provider integration to be functional.
 
 ## Open Questions
 - Real social media profile URLs?
-- Preferred hosting/deployment target (Netlify, Vercel, GitHub Pages, etc.)?
 - Should forms submit anywhere, or stay front-end only?
 
 ## Next Action
-Deliver the built site; get social media profile URLs from the owner and update `src/siteConfig.ts`; confirm hosting target and whether forms need a backend (the new Get Involved form still submits nowhere — front-end only).
+Connect the GitHub repo `EdwardKwinane/Shipshape-Minds` to the existing Vercel project (owner action in the Vercel dashboard) so pushes auto-deploy; then get social media profile URLs and update `src/siteConfig.ts`.
 
 ## Verification (last run 2026-09-13)
 - `npm run build` (tsc -b + vite build): passed
