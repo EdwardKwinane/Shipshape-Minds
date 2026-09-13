@@ -44,6 +44,9 @@ scripts/verify.mjs       # headless-browser smoke test (puppeteer-core + Edge)
 - Decision: Host on Vercel (existing site); auto-deploy from GitHub via the Vercel GitHub integration.
   Reason: Owner wants pushes to GitHub to update the live site automatically.
   Date: 2026-09-13
+- Decision: Get Involved form is now a 4-step flow (About You / Get Involved / Your Contribution / Tell Us More) covering all 12 questions, with conditional fields per involvement type and card/pill selection controls. Submissions POST to Web3Forms (`https://api.web3forms.com/submit`); success state only after Web3Forms confirms, with loading + error handling and data preserved on failure.
+  Reason: Owner replaced the simulated submit with real Web3Forms submission and requested the full question set.
+  Date: 2026-09-13
 
 ## Constraints
 - Must visually follow the Shipshape Minds design system from the assets: accent `#4B2E83`, ink `#2D2A32`, canvas `#F4F0F9`, line `#E5DEF0`, lavender `#E9E4F0`, Inter + Playfair Display, `rounded-jumbo` (2rem).
@@ -53,7 +56,8 @@ scripts/verify.mjs       # headless-browser smoke test (puppeteer-core + Edge)
 ## Known Risks
 - Social links use `href="#"` placeholders — need real profiles.
 - SPA uses `BrowserRouter`: `vercel.json` rewrites all routes to `index.html` (added 2026-09-13).
-- Donation/Volunteer/Contact/Newsletter forms submit nowhere yet — need backend/form provider integration to be functional.
+- Donation/Contact/Newsletter forms submit nowhere yet — only the Get Involved form is wired (Web3Forms).
+- Get Involved form needs `VITE_WEB3FORMS_ACCESS_KEY` set in Vercel env vars and local `.env` (see `.env.example`) or it shows a "not ready to receive submissions" error.
 
 ## Open Questions
 - Real social media profile URLs?

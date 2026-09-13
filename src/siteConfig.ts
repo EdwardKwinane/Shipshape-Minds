@@ -13,6 +13,11 @@ export const siteConfig = {
   },
 }
 
+export const web3formsConfig = {
+  endpoint: 'https://api.web3forms.com/submit',
+  subjectPrefix: 'New Get Involved submission',
+}
+
 export const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'About Us', to: '/about' },
