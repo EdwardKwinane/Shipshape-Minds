@@ -1,4 +1,4 @@
-import hero from './images/hero.jpg'
+import hero from './images/shipshape-minds-african-children-hero.jpg'
 import emotional from './images/emotional.jpg'
 import school from './images/school.jpg'
 import basicNeeds from './images/basic-needs.jpg'

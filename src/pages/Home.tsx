@@ -74,7 +74,7 @@ export default function Home() {
               <img
                 className="w-full h-[600px] object-cover"
                 src={images.hero}
-                alt="A group of diverse happy children playing together in a bright, modern educational space"
+                alt="Happy African children participating in a Shipshape Minds youth programme"
               />
             </div>
           </div>
